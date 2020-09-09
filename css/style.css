@@ -451,7 +451,7 @@ header .navbar ul li a.active::before{
 /* Portfolio Works */
 .portfolio{
     background-color: #f5f8fd;
-    padding: 100px 15px;
+    padding: 100px 7px;
 }
 .portfolio .section-title h1:before{
     left: 30%;
@@ -487,14 +487,15 @@ header .navbar ul li a.active::before{
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .portfolio .portfolio-gallery .item{
-    background-color: #d5d5d5;
-    flex: 0 0 calc(33.33% - 10px);
-    max-width: calc(33.33% - 10px);
-    margin-bottom: 16px;
+    flex: 0 0 33.33%;
+    max-width:33.33%;
+    position: relative;
+    padding: 8px;
+}
+.portfolio .portfolio-gallery .item .inner{
     position: relative;
 }
 .portfolio .portfolio-gallery .item img{
@@ -567,3 +568,82 @@ header .navbar ul li a.active::before{
     }
 }
 
+/* Lightbox */
+.lightbox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox.show{
+    display: flex;
+}
+.lightbox.hide{
+    display: none;
+}
+
+.lightbox .close-lightbox{
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    color:#febd01;
+    text-align: center;
+    line-height: 35px;
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 101;
+}
+.lightbox img{
+    max-width: 90%;
+    max-height: 80%;
+    display: block;
+}
+/* message text */
+.message-text{
+    background-color: #0c0c17;
+    padding: 40px 15px;
+}
+.message-text .text{
+    /* background-color: red; */
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+}
+.message-text h2{
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 35px;
+}
+.message-text .button{
+    /* background-color: grey; */
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: right;
+}
+.message-text .button a{
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    background-color: transparent;
+}
+.message-text .button a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
