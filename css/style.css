@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -32,7 +35,7 @@ body{
     color: #000000;
     margin: 0 0 10px;
     position: relative;
-}
+}  
 .section-title h1:before{
     content: '';
     left: 0;
@@ -63,6 +66,23 @@ header{
     padding: 0px 15px;
     z-index: 10;
 }
+
+header.fixed{
+    background-color: #ffffff;
+    position: fixed;
+    border-color: #eeeeee;
+    animation: fixHeader .5s ease;
+}
+
+@keyframes fixHeader{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-0%);
+    }
+}
+
 header .row{
     justify-content: space-between;
     align-items: center;
@@ -86,6 +106,9 @@ header .brand-name a{
     bottom: 0px; 
 } */
  
+header.fixed .brand-name a{
+    color: #000000;
+}
 header .navbar ul{
 list-style: none;
 padding: 0;
@@ -104,6 +127,15 @@ header .navbar ul li a{
     font-weight: 600;
     position: relative;
 }
+
+header.fixed .navbar ul li a{
+    color: #000000;
+}
+
+header.fixed .navbar ul li a::before{
+    background-color: #febd01;
+}
+
 header .navbar ul li a::before{
     content: '';
     height: 3px;
@@ -736,4 +768,56 @@ header .navbar ul li a.active::before{
 
 .testimonials .slider-indicator img.active{
     opacity: 1;
+}
+
+/* Footer */
+footer{
+    padding: 40px 15px;
+    background-color: #0c0c17;
+}
+
+footer .logo{
+    /* background-color: #d5d5d5; */
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+footer .social{
+    /* background-color: #d5d5d5; */
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+
+footer .social a{
+    color: #999999;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 12px;
+    transition:all .5s ease;
+    text-decoration: none;
+}
+
+footer .social a:hover{
+    color: #ffffff;
+}   
+
+/* copyright */
+.copyright{
+    background-color: #0c0c17;
+    border-top: 1px solid #1d1d27;
+    padding: 15px;
+}
+
+.copyright p{
+    color: #838383;
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15 px;
 }

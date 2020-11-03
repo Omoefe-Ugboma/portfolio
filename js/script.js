@@ -70,3 +70,26 @@ for(let i=0; i<indicatorImages.length; i++){
         slides[id].classList.add("active");
     })
 }
+
+
+ 
+//  fixed navbar
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("fixed", window.scrollY > 0)
+})
+
+// navbar links
+const navbar = document.querySelector(".navbar");
+a=navbar.querySelectorAll("a");
+
+a.forEach(function(element){
+    element.addEventListener("click",function(){
+        for(let i=0; i<a.length; i++){
+            a[i].classList.remove("active");
+        }
+        this.classList.add("active")
+    })
+})
+ 
