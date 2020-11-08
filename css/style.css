@@ -64,7 +64,7 @@ header{
     right: 0;
     border-bottom: 1px solid #423940;
     padding: 0px 15px;
-    z-index: 10;
+    z-index: 11;
 }
 
 header.fixed{
@@ -72,6 +72,7 @@ header.fixed{
     position: fixed;
     border-color: #eeeeee;
     animation: fixHeader .5s ease;
+    z-index: 11;
 }
 
 @keyframes fixHeader{
@@ -347,7 +348,7 @@ header .navbar ul li a.active::before{
 /* Services Section */
 .services{
      background-color: #f5f8fd;
-     padding: 100px 0px 70px;
+     padding: 100px 15px 70px;
 }
 .services .section-title h1:before{
  left: 30%;
@@ -425,7 +426,7 @@ header .navbar ul li a.active::before{
 }
 
 .skills .img{
-    background-color: blue;
+    /* background-color: blue; */
     flex: 0 0 50%;
     max-width: 50%;
 }
@@ -819,5 +820,143 @@ footer .social a:hover{
     margin: 0;
     text-align: center;
     font-weight: 400;
-    font-size: 15 px;
+    font-size: 15px;
+}
+header .brand-name a{
+    color: #ffffff;
+}
+.ham-burger .fa{
+    font-size: 20px;
+    height: 30px;
+    width: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    border: 1px solid #eeeeee;
+}
+
+@media(max-width: 991px){
+    .home .home-content .block h1{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 767px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: #ffffff;
+        border: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .ham-burger .fa{
+        display: inline-block;
+    }
+    .navbar{
+        position: absolute;
+        background-color: #ffffff;
+        width: 100%;
+        left: 0px;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eeeeee;
+        display: none;
+        border-bottom: 1px solid #eeeeee;
+       
+    }
+    .navbar.show{
+        display: block;
+    }
+    header .navbar ul li{
+        display: block;
+        margin-left: 0;
+    }
+    header .navbar ul li a{
+        line-height: 42px;
+        color: #000000;
+    }
+    header .navbar ul li a::before{
+        background-color: #febd01;
+    }
+    .about-me .about-content .text{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 0px;
+        padding-top: 30px;
+    }
+    .about-me .about-content .img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .services .service-content .box{
+        background-color: #ffffff;
+        padding: 30px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .skills .skills-content{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0px;
+    }
+    .skills .img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .portfolio .portfolio-gallery .item{
+        flex: 0 0 100%;
+        max-width: 50%;
+        position: relative;
+        padding: 8px;
+    }
+    .message-text .text{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+   
+    .message-text .button{
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left;
+        padding-top: 20px;
+    }
+
+}
+
+@media(max-width: 500px){
+    .home .home-content .block h1{
+        font-size: 30px;
+    }
+    .home .home-content .block h3{
+        font-size: 20px;
+    }
+
+    .home .home-content .block{
+        padding-left: 20px;
+    }
+    .portfolio .portfolio-gallery .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about-me .about-content .text .info .list p{
+        flex: 0 0 100%;
+    }
+    /* .testimonials .testimonials-content .testi-slider .slide .img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    } */
+}
+
+.response-content{
+  text-align:justify;
 }
