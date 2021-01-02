@@ -710,7 +710,7 @@ header .navbar ul li a.active::before{
     border: 1px solid #333333;
     max-width: 600px;
     margin: auto;
-    text-align: center;
+    text-align: left;
     padding: 30px;
 }
 
