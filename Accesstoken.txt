@@ -1,0 +1,2 @@
+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
+git remote set-url origin https://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@github.com/Omoefe-Ugboma/portfolio.git
